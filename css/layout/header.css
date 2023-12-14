@@ -1,0 +1,306 @@
+/*! header start*/
+.global-notification {
+    background-color: #000000;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+
+}
+
+.global-notification a {
+    font-weight: 600;
+}
+
+header {
+    border-bottom: 1px solid black;
+    position: sticky;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+
+}
+
+.header-row {
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-mobile {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.header-center .bi-x-octagon-fill {
+    display: none;
+}
+
+.header-center .navigation .menu-list {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.header-center .menu-list .menu-list-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 90px;
+}
+
+.header-center .menu-list .menu-link {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.header-center .menu-list .menu-link::after {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: .2s ease width;
+}
+
+.header-center .menu-list .menu-link:hover::after {
+    background-color: black;
+}
+
+.header-center .menu-list .menu-list-item:hover .menu-link::after {
+    width: 100%;
+}
+
+.header-center .menu-list .menu-link.active::after {
+    width: 100%;
+}
+
+.header-center .menu-list i {
+    font-size: 12px;
+}
+
+.header-center .menu-list i:hover {
+    color: #fff;
+
+}
+
+.header-center .menu-list ul a:hover {
+    color:  rgb(7, 83, 58)a;
+
+}
+
+.header-center .menu-list .menu-link:hover,
+.header-center .menu-list .menu-link:focus {
+    color: rgb(7, 83, 58);
+}
+
+.header-right .header-right-links {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.header-right .header-right-links i:hover {
+color:  rgb(7, 83, 58);
+}
+
+.header-right .bi-person {
+    font-size: 23px;
+}
+
+.header-right .search-button {
+    border: none;
+    background-color: transparent;
+}
+
+.header-right i {
+    font-size: 18px;
+    display: flex;
+}
+
+.header-right i:hover {
+    color: #fff;
+
+}
+
+.header-right .header-cart {
+    position: relative;
+}
+
+.header-right .header-cart-link .header-cart-count {
+    width: 18px;
+    height: 18px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 100%;
+    position: absolute;
+    top: -11px;
+    right: -10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+/*! menu dropdown start */
+header .menu-dropdown-wrapper {
+    position: absolute;
+    top: 100%;
+    left: -30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    z-index: 2;
+}
+
+header .menu-dropdown-content {
+    width: 220px;
+    background-color: white;
+    border: 1px;
+    border-top: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 0;
+}
+
+header .menu-dropdown-content a {
+    display: flex;
+    padding: 4px 30px;
+    font-size: 14px;
+}
+
+.header-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-dropdown-megamenu {
+    background-color: white;
+    border: 1px;
+    padding: 22px;
+    display: flex;
+    column-gap: 50px;
+}
+
+.megamenu-wrapper .menu-dropdown-wrapper {
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*! menu dropdown end*/
+
+.megamenu-wrapper {
+    position: static !important;
+}
+
+.megamenu-wrapper .megamenu-links {
+    display: flex;
+    column-gap: 50px;
+}
+
+.megamenu-wrapper .megamenu-products-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.megamenu-wrapper .megamenu-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.megamenu-wrapper .megamenu-menu-list a {
+    font-size: 14px;
+    flex-direction: column;
+}
+
+.megamenu-links .megamenu-products ul li a:hover {
+    color:  rgb(7, 83, 58);
+
+}
+
+.megamenu-wrapper .megamenu-single-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.megamenu-wrapper .megamenu-single-subtitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.megamenu-wrapper .megamenu-single-button {
+    margin-top: 5px;
+}
+
+.megamenu-wrapper .megamenu-single-button:hover {
+    margin-top: 5px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 15px;
+}
+
+/*! header end*/
+
+
+/* header responsive */
+@media (max-width:650px) {
+    .header-center {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        background-color: white;
+        border-right: 1px solid black;
+        z-index: 2;
+        transition: 0.5s ease all;
+    }
+
+    .header-center .bi-x-octagon-fill {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .header-center .menu-list {
+        flex-direction: column;
+        padding: 50px 75px;
+    }
+
+    .header-mobile {
+        display: inline-block;
+    }
+
+    header .menu-dropdown-wrapper {
+        display: none !important;
+    }
+
+    header .menu-list i {
+        display: none;
+    }
+
+    header .menu-list-item a {
+        font-size: 16px !important;
+    }
+}
