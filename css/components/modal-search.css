@@ -145,7 +145,6 @@
     right: 10px;
     font-size: 25px;
     cursor: pointer;
-
 }
 
 /*! modal search end*/
@@ -162,3 +161,41 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 420px) {
+    
+.modal-search .results {
+    display: grid;
+    grid-template-columns:  1fr;
+    border-left: 1px solid black;
+}
+
+.modal-search .result-item {
+    padding: 5px;
+}
+
+.modal-search .search-thumb {
+    width: 100%;
+}
+
+.modal-search .search-info {
+    font-size: 14px;
+}
+
+.modal-search .search-sku {
+    color: #7a7a7a7a;
+    margin: 2px 0;
+}
+
+.modal-search .search-price {
+    font-weight: 600;
+    color: rgb(236, 5, 5);
+}
+
+.modal-search .bi-x-octagon-fill {
+    position: absolute;
+    font-size: 23px;
+}
+}
+
+  
